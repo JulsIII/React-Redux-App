@@ -7,12 +7,12 @@ export const FETCH_JOKE_SUCCESS = "FETCH_QUOTE_SUCCESS";
 export const getJoke = () => dispatch => {
     dispatch({ type:FETCH_JOKE_START});
     axios 
-        .get('GET https://icanhazdadjoke.com/j/<joke_id>.png')
-        .then((resp)=>{
-            dispatch({ type:FETCH_JOKE_SUCCESS, payload: resp.data.joke});
+        .get('GET https://icanhazdadjoke.com/')
+        .then((res)=>{
+            dispatch({ type:FETCH_JOKE_SUCCESS, payload: res.data.joke});
         })
         .catch(err => {
-            dispatch({ type:FETCH_JOKE_FAIL, payload:err.response.code});
+            dispatch({ type:FETCH_JOKE_FAIL, payload: err.response.code});
         });
 }
 

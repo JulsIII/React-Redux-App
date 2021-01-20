@@ -1,7 +1,7 @@
 import { FETCH_JOKE_START, FETCH_JOKE_SUCCESS, FETCH_JOKE_FAIL} from './../actions';
 
 const initialState = {
-  quote: '',
+  joke: '',
   isFetching: false,
   error: ''
 };

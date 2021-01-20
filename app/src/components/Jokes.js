@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-
 import { getJoke} from '../actions';
 
-const Jokes = ({ joke, isFetching, error, getQuote }) => {
+const Jokes = ({ joke, isFetching, error, getJoke }) => {
   useEffect(() => {
     getJoke();
   }, []);
@@ -22,8 +21,8 @@ const Jokes = ({ joke, isFetching, error, getQuote }) => {
 
   return (
     <>
-      <h2>Dad says: {joke}</h2>
-      <button onClick={handleClick}>Get new joke</button>
+      <h2>Pappy says: {joke}</h2>
+      <button onClick={handleClick}>Tell new joke!</button>
     </>
   );
 };
