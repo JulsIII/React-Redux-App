@@ -9,7 +9,7 @@ const Jokes = ({ joke, isFetching, error, getJoke }) => {
 
   const handleClick = ()=> {
     getJoke();
-    console.log('BtnLoad', joke);
+    console.log('BtnLoad', {joke});
   };
 
   if (error) {
@@ -17,13 +17,13 @@ const Jokes = ({ joke, isFetching, error, getJoke }) => {
   }
 
   if (isFetching) {
-    return <h2>Fetching Dad Joke!</h2>;
+    return <h2>Fetching Strait Up FACTS!</h2>;
   }
 
   return (
     <>
-      <h2>Pappy says: {joke}</h2>
-      <button onClick={handleClick}>Tell new joke!</button>
+      <h2>FACT: {joke}</h2>
+      <button onClick={handleClick}>Tell me more!</button>
     </>
   );
 };

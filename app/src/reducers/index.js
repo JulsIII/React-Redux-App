@@ -13,12 +13,12 @@ export const reducer = (state = initialState, action) => {
         ...state,
         isFetching: true,
         error:'',
-        quote:''
+        joke:''
       });
     case(FETCH_JOKE_SUCCESS):
       return({
         ...state,
-        quote: action.payload,
+        joke: action.payload,
         isFetching: false,
         error:''
       })
