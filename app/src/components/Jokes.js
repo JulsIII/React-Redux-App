@@ -9,6 +9,7 @@ const Jokes = ({ joke, isFetching, error, getJoke }) => {
 
   const handleClick = ()=> {
     getJoke();
+    console.log('BtnLoad', joke);
   };
 
   if (error) {

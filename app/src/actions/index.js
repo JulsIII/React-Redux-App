@@ -10,7 +10,7 @@ export const getJoke = () => dispatch => {
         .get('GET https://icanhazdadjoke.com/')
         
         .then((res)=>{
-            console.log('the get*****', res);
+            console.log('******the get*****', res);
             dispatch({ type:FETCH_JOKE_SUCCESS, payload: res.data.joke});
         })
         .catch(err => {
