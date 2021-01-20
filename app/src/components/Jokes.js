@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { getJoke} from '../actions';
+import '../App.css';
 
 const Jokes = ({ joke, isFetching, error, getJoke }) => {
   useEffect(() => {
